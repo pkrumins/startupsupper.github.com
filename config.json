@@ -1,0 +1,9 @@
+{
+  "locals": {
+    "url": "http://startupsupper.com",
+    "name": "StartupSupper.com",
+    "owner": "Startup Supper",
+    "description": "When food and startups colide!",
+    "index_articles": 3
+  }
+}
