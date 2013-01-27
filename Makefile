@@ -1,5 +1,6 @@
 DIR=_deploy
 GITHUB_REPO=git@github.com:startupsupper/startupsupper.github.com.git
+LAST_COMMIT=$(git log -1 HEAD --pretty=format:%s)
 
 setup:
 	if test ! -d $(DIR); then \
@@ -16,4 +17,4 @@ clean:
 
 deploy: setup clean
 	wintersmith build -o $(DIR)
-	cd $(DIR); git add .; git commit -am 'Deploying pages'; git push -f origin master
+	cd $(DIR); git add .; git commit -am '$(LAST_COMMIT)'; git push -f origin master
