@@ -108,7 +108,7 @@ module.exports = function(grunt){
       }
 
       log('Push changes to github')
-      dirExec('git push -f origin master', done)
+      dirExec('git push origin master', done)
     }
   })
 
