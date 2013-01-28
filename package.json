@@ -1,0 +1,21 @@
+{
+  "name": "startupsupper.com",
+  "version": "0.0.1",
+  "description": "Bootstrap your food!",
+  "main": "",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "0.3.17",
+    "mkdirp": "0.3.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/startupsupper/startupsupper.github.com.git"
+  },
+  "author": "",
+  "license": "BSD"
+}
