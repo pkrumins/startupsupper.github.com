@@ -34,23 +34,26 @@ module.exports = function(grunt){
       dirExec('git init', gitInit)
     }
 
-    function gitInit(err) {
+    function gitInit(err, stdout) {
       if (err) return done(err)
 
+      log('stdout: ' + stdout)
       log('Adding github to remotes as origin')
       dirExec('git remote add origin ' + config('gitUrl'), setRemote)
     }
 
-    function setRemote(err) {
+    function setRemote(err, stdout) {
       if (err && !/exists/.test(err.message)) return done(err.message)
 
+      log('stdout: ' + stdout)
       log('Setting master branch remote')
       dirExec('git config branch.master.remote master', setMasterBranch)
     }
 
-    function setMasterBranch(err) {
+    function setMasterBranch(err, stdout) {
       if (err) return done(err)
 
+      log('stdout: ' + stdout)
       log('Setting master branch merge')
       dirExec('git config branch.master.merge refs/heads/master', done)
     }
