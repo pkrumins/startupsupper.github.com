@@ -93,7 +93,17 @@ module.exports = function(grunt){
     function gotLastCommit(err, stdout) {
       if (err) return done(err)
 
-      console.log(stdout)
+      if (process.env.NODE_ENV === 'travis-ci') {
+        log('Add email/name to git config if deploying from travis ci')
+        dirExec('git config user.email "travis-ci@startupsupper.com" && git config user.name "Travis CI Bot"', makeCommit)
+      } else {
+        makeCommit()
+      }
+    }
+
+    function makeCommit(err) {
+      if (err) return done(err)
+
       log('Make commit of changes with last commit msg from source branch')
       dirExec('git commit -am "' + stdout + '"', madeCommit)
     }

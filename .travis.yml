@@ -15,6 +15,7 @@ script:
 - npm run deploy
 env:
   global:
+  - NODE_ENV=travis-ci
   - secure: "AZXlcrF4YmCv9D/PGqXSXezSVs+4g+OWMz437uRnI++zdi43YIQrjFgg97WS\nbk8Ukmbw1tmIDYCL6lsl0dApNx/9hhbAvwRSayk/YURXSMtmcOe1N1yhPpDS\nq2xAPPuiwNZoTHHJY2ED30AvkeF1oVj8ExUlf27fti/OKJarUfc="
   - secure: "mHNh7G2/BMzQkEUuVucyd53KfNeWh3LDWYNBBWEWpeLsFQCQYkVx0+2RcZoz\nobfbNMC5Wm2Tio3g5HZZhBa3TT/1tnd26RutuvjiHJgHA+W6r9mYeRSar8ja\nxEFtMyS6qH+j/Z9qBE0HLMv85bcfFTSCd0lTdmGOSXkFcIEtlec="
   - secure: "JLBnoaPrlGA60aXUrg5zHDeZo7fVfgKMcNNyX3sJh4YAlbKi3E2OpnzH7DKm\nrEX4w6QO68XWy7AudElleH6d3pkIIMlLqlAlVZwjsy8qSuzQs4PLBXrh/QwW\nM2ZRdtHJ0WkN6u+UVPzNQHdvpASDY4SuX69F1LnjqUSXgT1GfS8="
