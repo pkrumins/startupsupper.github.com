@@ -105,7 +105,7 @@ module.exports = function(grunt){
       if (err) return done(err)
 
       log('Make commit of changes with last commit msg from source branch')
-      dirExec('git commit -am "' + commit + '"', madeCommit)
+      dirExec('git commit -am "' + commit + ' [ci skip]"', madeCommit)
     }
 
     function madeCommit(err, stdout) {
