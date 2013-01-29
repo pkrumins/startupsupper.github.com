@@ -34,26 +34,23 @@ module.exports = function(grunt){
       dirExec('git init', gitInit)
     }
 
-    function gitInit(err, stdout) {
+    function gitInit(err) {
       if (err) return done(err)
 
-      log('stdout: ' + stdout)
       log('Adding github to remotes as origin')
       dirExec('git remote add origin ' + config('gitUrl'), setRemote)
     }
 
-    function setRemote(err, stdout) {
+    function setRemote(err) {
       if (err && !/exists/.test(err.message)) return done(err.message)
 
-      log('stdout: ' + stdout)
       log('Setting master branch remote')
       dirExec('git config branch.master.remote master', setMasterBranch)
     }
 
-    function setMasterBranch(err, stdout) {
+    function setMasterBranch(err) {
       if (err) return done(err)
 
-      log('stdout: ' + stdout)
       log('Setting master branch merge')
       dirExec('git config branch.master.merge refs/heads/master', done)
     }
@@ -76,7 +73,7 @@ module.exports = function(grunt){
       if (err) return done(err)
 
       log('Building site')
-      exec('wintersmith build -o ' + config('dir'), builtDeploy)
+      exec('node_modules/.bin/wintersmith build -o ' + config('dir'), builtDeploy)
     }
 
     function builtDeploy(err) {
