@@ -1,5 +1,5 @@
 {
-  "plugins": [ "wintersmith-less" ],
+  "plugins": [ "./node_modules/wintersmith-less" ],
   "locals": {
     "url": "http://startupsupper.com",
     "name": "StartupSupper",
