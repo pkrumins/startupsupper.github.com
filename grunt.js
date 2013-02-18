@@ -73,7 +73,7 @@ module.exports = function(grunt){
       if (err) return done(err)
 
       log('Building site')
-      exec('node_modules/.bin/wintersmith build -o ' + config('dir'), builtDeploy)
+      exec('node_modules/.bin/wintersmith build -P wintersmith-less -o ' + config('dir'), builtDeploy)
     }
 
     function builtDeploy(err) {
