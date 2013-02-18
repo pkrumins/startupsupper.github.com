@@ -1,9 +1,10 @@
 {
+  "plugins": [ "wintersmith-less" ],
   "locals": {
     "url": "http://startupsupper.com",
-    "name": "StartupSupper.com",
+    "name": "StartupSupper",
     "owner": "Startup Supper",
-    "description": "When food and startups colide!",
-    "index_articles": 3
+    "description": "Real Food for Bootstrappers & Hungry Hackers.",
+    "index_articles": 5
   }
 }

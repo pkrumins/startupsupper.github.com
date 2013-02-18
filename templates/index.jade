@@ -3,6 +3,166 @@ html(lang='en')
   head
     meta(charset='utf-8')
     title= locals.title
-  body
-    h1= page.title
-    != page.html
+    meta(name='description', content=locals.description)
+    meta(http-equiv='cleartype', content='on')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    meta(property='og:site_name', content='StartupSupper')
+    meta(property='og:type', content='website')
+    meta(property='og:title', content=locals.title)
+    meta(property='og:description', content=locals.description)
+    meta(property='og:image', content=locals.image)
+    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Lato:100,300,400,900|Inconsolata')
+    link(rel='stylesheet', href='/style/bootstrap/bootstrap.css')
+    link(rel='stylesheet', href='/style/bootstrap/responsive.css')
+  body.featured
+    //- fork repo badge, facebook, twitter, pinterest
+    //-h1= page.title
+    //-!= page.html
+    #wrap
+      .navbar.navbar-inverse.navbar-fixed-top
+        .navbar-inner
+          .container
+            .pull-right
+              button(type='button', data-toggle='collapse', data-target='.nav-collapse').btn.btn-navbar
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              //-.
+                form.navbar-search.hidden-phone
+                  .input-append
+                    <input name="search" type="text" placeholder="search for a recipe&hellip;"><span class="add-on"><i class="icon-search"></i></span>
+            a(href='/').brand
+              i.icon-startupsupper
+              | &nbsp;
+              | StartupSupper
+            .nav-collapse.collapse
+              ul.nav
+                li.active: a(href='/') <i class="icon-star"></i> Featured
+                li: a(href='#recipes') <i class="icon-food"></i> Recipes
+                li.dropdown
+                  a(href='#', data-toggle='dropdown').dropdown-toggle <i class="icon-gift"></i> Goodies <b class="caret"></b>
+                  ul.dropdown-menu
+                    li: a(href='#newsletter') <i class="icon-envelope"></i> Newsletter
+                    li: a(href='https://github.com/startupsupper/startupsupper.github.com', target='_blank') <i class="icon-github"></i> Github
+                    li: a(href='https://www.facebook.com/startupsupper', target='_blank') <i class="icon-facebook-sign"></i> Facebook
+                    li: a(href='https://twitter.com/startupsupper', target='_blank') <i class="icon-twitter"></i> Twitter
+                    li: a(href='http://pinterest.com/startupsupper', target='_blank') <i class="icon-pinterest"></i> Pinterest
+      .container
+        .hero-unit
+          h1 Recipes for Bootstrappers &amp; Hungry Hackers
+          blockquote
+            h4 Living on instant ramen would be very unhealthy.
+            small Paul Graham in <cite><a href="http://paulgraham.com/ramenprofitable.html#f1n" target="_blank">Ramen Profitable</a></cite>
+          p
+            a(href='/newsletter').btn.btn-success.btn-large <i class="icon-envelope"></i> <span class="hidden-phone">Join our Newsletter</span><span class="visible-phone">Join</span>
+            | &nbsp;
+            a(href='https://github.com/startupsupper/startupsupper.github.com', target='_blank').btn.btn-inverse.btn-large <i class="icon-github"></i> <span class="hidden-phone">Contribute on Github</span><span class="visible-phone">Github</span>
+      #push
+    footer#footer
+      .container
+        p.muted.pull-right.credit &copy; 2012 <span class="hidden-phone">StartupSupper</span>
+        p.muted.credit Cooked by <a href="http://niftylettuce.com" target="_blank">Nick</a>, <a href="http://www.strikingly.com" target="_blank">Teng</a>, and <a href="http://lepahc.com" target="_blank">Jacob</a>
+
+    //-.
+      .wide.header.orange
+        .container
+          .sixteen.columns
+            h4.b.float Startup Supper
+            h6.lower.float.light.fw4(style='margin-top:6px;') Real Food For Bootstrappers &amp; Hungry Hackers
+      .wide
+        .container
+          .sixteen.columns
+            h1
+              span.b= page.title
+            .tags
+              .tag
+                | Skill level
+                .b= 'noob hacker'
+              .tag
+                | Prep time
+                .b= '15 min'
+              .tag
+                | Cook time
+                .b= '15 min'
+              .tag
+                | Serves
+                .b= '2-3'
+              .tag
+                | Total cost
+                .b= '$5-7'
+            img(src='beef-stir-fry.jpg')
+            div(style='height:15px;')
+          .four.columns.half-fixed
+            img(src='steak.jpg')
+          .four.columns.half-fixed
+            img(src='beansauce.jpg')
+          .four.columns.half-fixed
+            img(src='pepper.jpg')
+          .four.columns.half-fixed
+            img(src='jalapeno.jpg')
+          .four.columns.pad
+            h3.fw4 The Stack
+            ul.ingredients
+              li
+                span 1/2 lb flank steak, cut into small strips
+              li
+                span 1 red and 1 green bell pepper, diced
+              li
+                span 1 jalapeno pepper, diced
+              li
+                span 1 Asian eggplant, diced
+              li
+                span 3 cloves garlic, minced
+              li
+                span 3 tbsp vegetable/peanut oil
+              li
+                span 2 tbsp soy sauce
+              li
+                span 1 tbsp chili black bean sauce
+              li
+                span salt &amp; pepper
+          .eight.columns.pad
+            .text
+              h3.fw4 The Algo
+              p
+                .mono.gray while(hungry){
+                ul.indent.instructions.mono
+                  li 1. Cut beef into equal-sized small strips. Cut across the grain. Season with salt and pepper (lots of pepper).
+                  li 2. Heat a few tablespoons of oil in a large pan or wok. Add bell peppers, eggplant, jalapeno, and garlic. Add 1/2 tsp of salt. Saute for 5-8 minutes, stirring, or until eggplant is soft. 
+                  li 3. Make some room for the beef in the pan, then add it to the pan. Add more oil if necessary.
+                  li 4. Add soy sauce and chili sauce. Continue cooking for 5-8 minutes or until beef is done, stirring continuously. Get the rice ready, it's time for STEAK NIGHT.
+                .mono.gray }
+          .four.columns.pad
+            h3.fw4 Dependencies
+            ul.dependencies
+              li Big pan/wok
+              li A good blade
+              li Cutting board
+              li Wooden spoon
+            br
+            br
+            h3.fw4 Optional
+            ul.dependencies
+              li Sriracha
+              li Any other vegetables
+              li Tofu
+              li Marinating the beef
+      .wide
+        .container
+          .sixteen.columns
+            h5.fw3.gray
+              Designed by Teng Bao, <a href='http://striking.ly'>Striking.ly</a>. Curated by Teng Bao &amp; Nick Baugh.
+
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js')
+    script.
+      window.jQuery || document.write('<script src="/js/vendor/jquery.min.js"><\/script>')
+    script(src='/js/vendor/bootstrap/build/bootstrap.min.js')
+    script.
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-38260551-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();

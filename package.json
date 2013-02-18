@@ -1,7 +1,7 @@
 {
-  "name": "startupsupper.com",
+  "name": "startupsupper",
   "version": "0.0.1",
-  "description": "Bootstrap your food!",
+  "description": "Recipes for Bootstrappers & Hungry Hackers",
   "main": "",
   "dependencies": {
   },

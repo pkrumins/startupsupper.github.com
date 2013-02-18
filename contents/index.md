@@ -1,6 +1,7 @@
+---
 title: StartupSupper
 template: index.jade
-
+---
 
 BACON!!!
 -----------

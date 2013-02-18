@@ -1,0 +1,168 @@
+.container-float-mixin (@col:40px, @gutter:10px) {
+  @total: (@col + 2 * @gutter) * 16;
+
+  .container {
+    position: relative; width: @total; margin: 0 auto; padding: 0;
+    .column, .columns {
+      float: left; display: inline;
+      margin-left: @gutter; margin-right: @gutter;
+      &.right{float:right;}
+      &.no-float{
+        display:inline-block; vertical-align:top; float:none;
+        zoom:1;
+        *display:inline;
+      }
+    }
+  }
+
+  /* Nested Column Classes */
+  .column, .columns {
+    &.alpha {margin-left: 0;}
+    &.omega {margin-right: 0;}
+  }
+  .row {
+    margin-bottom: 20px;
+  }
+
+  /* Base Grid */
+  .container{
+    .one.column, .one.columns        { width: @col;  }
+    .two.columns                     { width: @col + (@col + @gutter * 2) * 1; }
+    .three.columns                   { width: @col + (@col + @gutter * 2) * 2; }
+    .four.columns                    { width: @col + (@col + @gutter * 2) * 3; }
+    .five.columns                    { width: @col + (@col + @gutter * 2) * 4; }
+    .six.columns                     { width: @col + (@col + @gutter * 2) * 5; }
+    .seven.columns                   { width: @col + (@col + @gutter * 2) * 6; }
+    .eight.columns                   { width: @col + (@col + @gutter * 2) * 7; }
+    .nine.columns                    { width: @col + (@col + @gutter * 2) * 8; }
+    .ten.columns                     { width: @col + (@col + @gutter * 2) * 9; }
+    .eleven.columns                  { width: @col + (@col + @gutter * 2) * 10; }
+    .twelve.columns                  { width: @col + (@col + @gutter * 2) * 11; }
+    .thirteen.columns                { width: @col + (@col + @gutter * 2) * 12; }
+    .fourteen.columns                { width: @col + (@col + @gutter * 2) * 13; }
+    .fifteen.columns                 { width: @col + (@col + @gutter * 2) * 14; }
+    .sixteen.columns                 { width: @col + (@col + @gutter * 2) * 15; }
+    .column, .columns{
+      &.third, &.one-third           { width: @total * 0.33333 - (2 * @gutter); }
+      &.two-thirds                   { width: @total * 0.66666 - (2 * @gutter); }
+      &.fifth, &.one-fifth           { width: @total * 0.2 - (2 * @gutter); }
+      &.two-fifths                   { width: @total * 0.4 - (2 * @gutter); }
+      &.three-fifths                 { width: @total * 0.6 - (2 * @gutter); }
+      &.four-fifths                  { width: @total * 0.8 - (2 * @gutter); }
+    }
+
+    .offset-one                     { padding-left: (@col + @gutter * 2);  }
+    .offset-two                     { padding-left: (@col + @gutter * 2) * 2; }
+    .offset-three                   { padding-left: (@col + @gutter * 2) * 3; }
+    .offset-four                    { padding-left: (@col + @gutter * 2) * 4; }
+    .offset-five                    { padding-left: (@col + @gutter * 2) * 5; }
+    .offset-six                     { padding-left: (@col + @gutter * 2) * 6; }
+    .offset-seven                   { padding-left: (@col + @gutter * 2) * 7; }
+    .offset-eight                   { padding-left: (@col + @gutter * 2) * 8; }
+    .offset-nine                    { padding-left: (@col + @gutter * 2) * 9; }
+    .offset-ten                     { padding-left: (@col + @gutter * 2) * 10; }
+    .offset-eleven                  { padding-left: (@col + @gutter * 2) * 11; }
+    .offset-twelve                  { padding-left: (@col + @gutter * 2) * 12; }
+    .offset-thirteen                { padding-left: (@col + @gutter * 2) * 13; }
+    .offset-fourteen                { padding-left: (@col + @gutter * 2) * 14; }
+    .offset-fifteen                 { padding-left: (@col + @gutter * 2) * 15; }
+
+    .right.offset-one                     { padding-left: 0; padding-right: (@col + @gutter * 2);  }
+    .right.offset-two                     { padding-left: 0; padding-right: (@col + @gutter * 2) * 2; }
+    .right.offset-three                   { padding-left: 0; padding-right: (@col + @gutter * 2) * 3; }
+    .right.offset-four                    { padding-left: 0; padding-right: (@col + @gutter * 2) * 4; }
+    .right.offset-five                    { padding-left: 0; padding-right: (@col + @gutter * 2) * 5; }
+    .right.offset-six                     { padding-left: 0; padding-right: (@col + @gutter * 2) * 6; }
+    .right.offset-seven                   { padding-left: 0; padding-right: (@col + @gutter * 2) * 7; }
+    .right.offset-eight                   { padding-left: 0; padding-right: (@col + @gutter * 2) * 8; }
+    .right.offset-nine                    { padding-left: 0; padding-right: (@col + @gutter * 2) * 9; }
+    .right.offset-ten                     { padding-left: 0; padding-right: (@col + @gutter * 2) * 10; }
+    .right.offset-eleven                  { padding-left: 0; padding-right: (@col + @gutter * 2) * 11; }
+    .right.offset-twelve                  { padding-left: 0; padding-right: (@col + @gutter * 2) * 12; }
+    .right.offset-thirteen                { padding-left: 0; padding-right: (@col + @gutter * 2) * 13; }
+    .right.offset-fourteen                { padding-left: 0; padding-right: (@col + @gutter * 2) * 14; }
+    .right.offset-fifteen                 { padding-left: 0; padding-right: (@col + @gutter * 2) * 15; }
+
+  }
+}
+
+.container-fixed-mixin (@col : 300px, @gutter: 8px) {
+  .container {
+    width: @col + 2*@gutter; margin: 0 auto; padding: 0;
+    .column, .columns, .one.column, .one.columns, .two.columns, .three.columns, .four.columns, .five.columns,
+    .six.columns, .seven.columns, .eight.columns, .nine.columns, .ten.columns, .eleven.columns,
+    .twelve.columns, .thirteen.columns, .fourteen.columns, .fifteen.columns, .sixteen.columns,
+    .one-third.column, .third.column, .third.columns, .two-thirds.column, .fifth.column, .fifth.columns,
+    .two-fifths.columns, .three-fifths.columns, .four-fifths.columns{
+      margin: 5px 0;
+      margin-left: @gutter; margin-right:@gutter;
+      width: @col;
+
+      &.half-fixed {
+        width: @col * 0.5 - @gutter;
+      }
+    }
+    .offset-one, .offset-two, .offset-three, .offset-four, .offset-five, .offset-six, .offset-seven,
+    .offset-eight, .offset-nine, .offset-ten, .offset-eleven, .offset-twelve, .offset-thirteen,
+    .offset-fourteen, .offset-fifteen{
+      padding-left: 0;
+    }
+    .row {
+      margin-bottom:20px;
+      &.last {margin-bottom:0;}
+    }
+    .column, .columns{
+      &.mb{margin-bottom:10px;}
+    }
+    .center-if-fixed{
+      text-align: center;
+    }
+  }
+}
+
+/* Clearing */
+
+/* Self Clearing Goodness */
+.container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+/* Use clearfix class on parent to clear nested columns,
+or wrap each row of columns in a <div class="row"> */
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+.row:after,
+.clearfix:after {
+  clear: both; }
+.row,
+.clearfix {
+  zoom: 1; }
+
+/* You can also use a <br class="clear" /> to clear columns */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.container-float-mixin(81px);
+@media only screen and (min-width: 1520px) and (max-width: 1680px) { .container-float-mixin(70px); }
+@media only screen and (min-width: 1320px) and (max-width: 1519px) { .container-float-mixin(58px); }
+@media only screen and (min-width: 1120px) and (max-width: 1319px) { .container-float-mixin(48px); }
+@media only screen and (min-width: 980px) and (max-width: 1119px) { .container-float-mixin(40px); }
+@media only screen and (min-width: 850px) and (max-width: 979px) { .container-float-mixin(32px); }
+@media only screen and (min-width: 728px) and (max-width: 849px) { .container-float-mixin(28px, 8px); }
+@media only screen and (min-width: 580px) and (max-width: 727px) { .container-fixed-mixin(540px); }
+@media only screen and (min-width: 480px) and (max-width: 579px) { .container-fixed-mixin(440px); }
+@media only screen and (min-width: 420px) and (max-width: 479px) { .container-fixed-mixin(380px); }
+@media only screen and (min-width: 400px) and (max-width: 419px) { .container-fixed-mixin(320px); }
+@media only screen and (max-width: 399px) { .container-fixed-mixin(296px); }
