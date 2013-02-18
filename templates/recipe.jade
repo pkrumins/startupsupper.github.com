@@ -1,5 +1,17 @@
+
+//- != JSON.stringify(page.metadata)
+
 extends layout
 
 block content
-  p blah
-  != JSON.stringify(page.metadata)
+  h1= page.metadata.title
+  include author
+  p
+    small
+      | By:
+      | &nbsp;
+      mixin author(page.metadata.author)
+  ul
+    each ingredient in page.metadata.ingredients
+      li= ingredient
+  != page.html

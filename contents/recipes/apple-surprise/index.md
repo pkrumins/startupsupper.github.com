@@ -1,6 +1,6 @@
 ---
 title: Apple Surprise
-author: Jacob Chapel
+author: jacob-chapel
 date: 2013-02-17 15:00
 template: recipe.jade
 ingredients:
@@ -9,3 +9,5 @@ ingredients:
 ---
 
 This is a test recipe
+
+Make it awesome!
