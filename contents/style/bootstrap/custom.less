@@ -1,10 +1,45 @@
 
 // custom stuff
 
-.featured {
+.background {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url('/img/background.jpg');
-  background-position: center bottom;
-  background-attachment: fixed;
+  background-position: center 20%;
+  height: 300px;
+  .border-radius(0px);
+  color: @white;
+  text-shadow: 0 1px 0 rgba(0,0,0,75%);
+  border-bottom: 1px solid #e5e5e5;
+}
+
+@media (max-width: 979px) {
+  .background {
+    margin-top: -20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .background {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 20px;
+    h1 {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .background {
+    padding: 20px;
+    font-size: 14px;
+    h1 {
+      font-size: 20px;
+    }
+  }
+}
+
+body {
+  background-image: url('/img/linedpaper.png');
 }

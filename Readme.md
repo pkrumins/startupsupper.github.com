@@ -1,5 +1,6 @@
 
-# StartupSupper <sup><a href="https://travis-ci.org/startupsupper/startupsupper.github.com" target="_blank"><img src="https://api.travis-ci.org/startupsupper/startupsupper.github.com.png" alt="" /></a></sup>
+<a href="https://travis-ci.org/startupsupper/startupsupper.github.com" target="_blank"><img src="https://api.travis-ci.org/startupsupper/startupsupper.github.com.png" alt="" /></a></sup>
+# StartupSupper
 
 Recipes for Bootstrappers & Hungry Hackers
 
@@ -42,10 +43,11 @@ Easily submit your recipe following these instructions:
     ./node_modules/wintersmith/bin/wintersmith preview
     ```
 
-6. Submit a new pull request &rarr; we'll merge it and your recipe will be automatically published.
+6. Submit a new pull request, we'll merge it, and your recipe will be automatically published.
 
     > (e.g. <http://startupsupper.com/recipes/chicken-noodle-soup>)
 
 ## Lazyweb Requests
 
 - [ ] Integrate <https://github.com/christophercliff/wintersmith-kelvin>
+- [ ] page.metadata.image in layout.jade

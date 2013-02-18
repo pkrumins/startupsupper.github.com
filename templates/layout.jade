@@ -1,24 +1,23 @@
-- page.title = (page.title) ? page.title + ' - StartupSupper' : 'StartupSupper'
-- page.description = (page.description) ? page.description : 'Recipes for Bootstrappers & Hungry Hackers'
-- console.log('locals', locals)
-- console.log('page', page)
+- page.metadata.title = (page.metadata.title) ? page.metadata.title + ' - StartupSupper' : 'StartupSupper'
+- page.metadata.description = (page.metadata.description) ? page.metadata.description : 'Recipes for Bootstrappers & Hungry Hackers'
+- page.metadata.image = (page.metadata.image) ? page.metadata.image : 'TODO'
 !!! 5
 html(lang='en')
   head
     meta(charset='utf-8')
-    title= page.title
-    meta(name='description', content=page.description)
+    title= page.metadata.title
+    meta(name='description', content=page.metadata.description)
     meta(http-equiv='cleartype', content='on')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
     meta(property='og:site_name', content='StartupSupper')
     meta(property='og:type', content='website')
-    meta(property='og:title', content=page.title)
-    meta(property='og:description', content=page.description)
-    meta(property='og:image', content=locals.image)
+    meta(property='og:title', content=page.metadata.title)
+    meta(property='og:description', content=page.metadata.description)
+    meta(property='og:image', content=page.metadata.image)
     link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Lato:100,300,400,900|Inconsolata')
     link(rel='stylesheet', href='/style/bootstrap/bootstrap.css')
     link(rel='stylesheet', href='/style/bootstrap/responsive.css')
-  body.featured
+  body
     //- fork repo badge, facebook, twitter, pinterest
     //-h1= page.title
     #wrap
@@ -51,16 +50,16 @@ html(lang='en')
                     li: a(href='https://twitter.com/startupsupper', target='_blank') <i class="icon-twitter"></i> Twitter
                     li: a(href='http://pinterest.com/startupsupper', target='_blank') <i class="icon-pinterest"></i> Pinterest
       - if (page.metadata.heroUnit)
-        .container
-          .hero-unit
+        .hero-unit.background
+          .container
             h1 Recipes for Bootstrappers &amp; Hungry Hackers
             blockquote
               h4 Living on instant ramen would be very unhealthy.
-              small Paul Graham in <cite><a href="http://paulgraham.com/ramenprofitable.html#f1n" target="_blank">Ramen Profitable</a></cite>
+              small Paul Graham in <cite><strong><a href="http://paulgraham.com/ramenprofitable.html#f1n" target="_blank">Ramen Profitable</a></strong></cite>
             p
               a(href='/newsletter').btn.btn-success.btn-large <i class="icon-envelope"></i> <span class="hidden-phone">Join our Newsletter</span><span class="visible-phone">Join</span>
               | &nbsp;
-              a(href='https://github.com/startupsupper/startupsupper.github.com', target='_blank').btn.btn-inverse.btn-large <i class="icon-github"></i> <span class="hidden-phone">Contribute on Github</span><span class="visible-phone">Github</span>
+              a(href='https://github.com/startupsupper/startupsupper.github.com#startupsupper', target='_blank').btn.btn-inverse.btn-large <i class="icon-github"></i> <span class="hidden-phone">Contribute on Github</span><span class="visible-phone">Github</span>
       .container
         block content
           != page.html

@@ -24,25 +24,9 @@
     line-height: @baseLineHeight * 1.5; // Reset since we specify in type.less
   }
   blockquote {
-    border-left: 5px solid darken(@heroUnitBackground, 10%);
-  }
-}
-
-@media (max-width: 767px) {
-  .hero-unit {
-    padding: 40px;
-    h1 {
-      font-size: 30px;
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-unit {
-    padding: 20px;
-    font-size: 14px;
-    h1 {
-      font-size: 20px;
+    border-left: 5px solid rgba(255,255,255,50%);
+    small {
+      color: @white;
     }
   }
 }
