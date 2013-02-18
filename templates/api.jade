@@ -1,0 +1,9 @@
+- var recipes = _.chain(contents.recipes._.directories).map(function(item){ return item.index }).sortBy(function(item) { return -item.date }).value()
+- var json = {recipes: []}
+
+- for (var i = 0; i < recipes.length; i+=1) {
+  - var recipe = recipes[i]
+  - json.recipes.push({title: recipe.title, permalink: locals.url+recipe.url, api_link: locals.url+recipe.url+'data.json', date: recipe.date, author: recipe.metadata.author})
+- }
+
+!= JSON.stringify(json)
