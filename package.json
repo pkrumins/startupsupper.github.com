@@ -3,12 +3,11 @@
   "version": "0.0.1",
   "description": "Recipes for Bootstrappers & Hungry Hackers",
   "main": "",
-  "dependencies": {
-  },
   "devDependencies": {
     "grunt": "0.3.17",
     "mkdirp": "0.3.4",
-    "wintersmith": "1.2.2"
+    "wintersmith": "1.2.2",
+    "wintersmith-less": "0.1.0"
   },
   "scripts": {
     "deploy": "grunt"
