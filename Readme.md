@@ -42,9 +42,9 @@ Easily submit your recipe following these instructions:
     ./node_modules/wintersmith/bin/wintersmith preview
     ```
 
-6. Submit a new pull request.
+6. Submit a new pull request &rarr; we'll merge it and your recipe will be automatically published.
 
-    > Once we accept your pull request, your recipe will be automatically published (e.g. <http://startupsupper.com/recipes/chicken-noodle-soup>).
+    > (e.g. <http://startupsupper.com/recipes/chicken-noodle-soup>)
 
 ## Lazyweb Requests
 
